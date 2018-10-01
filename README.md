@@ -95,7 +95,7 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
       draw();// the draw method draw all shapes that have been initialized
     ```
     #### OUTPUT
-     [ grid image ](grid.png)
+     ![ grid image ](grid.PNG)
    ## Rectangle
      ### GENERAL SYNTAX
      ` rec({x:x-coord,y:y-coord,w:width,h:height});`
