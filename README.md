@@ -58,7 +58,20 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
          <!-- Here is where you place your code-->
          <script></script>
       </html>   
-      
+  So an important thing to know when working with pxShader.js is that you are actually mainly working in a coordinate system 
+  that is when drawing any thing using the library you need to specify the x and y coordinates of the object you want to draw.
+  That said let's look at what we can actually put in our __empty__ script tag
+  ``` javascript
+      var c = canvas2d();
+  ```
+  so this is basically the basic syntax for using the library you can't draw any with calling the __canvas2d()__ funtion or you are bound to get and error so let's look at the function and it's parameters.
+  so this is the general syntax for this __canvas2d(width,height,responsive?,centered?)__
+  |paramters|Meaning|
+  |---------|-------|
+  | width   | `optional`:Specifies the width of the drawing element,`default`:600px|
+  | height  | `optional`:Specifies the height of the drawing element,`default`:600px|
+  | responsive? | `optional`:Tells whether the drawing element is media responsive or not (adapts it's size to screen size) `default`: false|
+  | centered? | `optional`: Tells whether the drawing elemet is centered or not `default`: false|
    ## Rectangle
      ### GENERIC SYNTAX
      the syntax for
