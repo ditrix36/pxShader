@@ -46,9 +46,8 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
      * [ sounds ](#sounds)
 * [__More Examples__](#Examples)
    ## Setup
-   
-      So we will first see what are the basic requirements to start the tutorial,
-      well fisrt you will actually need to download it and include it in your code in this way.
+    So we will first see what are the basic requirements to start the tutorial,
+    well fisrt you will actually need to download it and include it in your code in this way.
 
       <html>
          <body>
@@ -66,12 +65,14 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
   ```
   so this is basically the basic syntax for using the library you can't draw any with calling the __canvas2d()__ funtion or you are bound to get and error so let's look at the function and it's parameters.
   so this is the general syntax for this __canvas2d(width,height,responsive?,centered?)__
+  
   | paramters | Meaning |
   | --- | --- |
-  | width   | `optional`:Specifies the width of the drawing element,`default`:600px|
-  | height  | `optional`:Specifies the height of the drawing element,`default`:600px|
+  | width |`optional`:Specifies the width of the drawing element,`default`:600px|
+  | height|`optional`:Specifies the height of the drawing element,`default`:600px|
   | responsive? | `optional`:Tells whether the drawing element is media responsive or not (adapts it's size to screen size) `default`: false|
   | centered? | `optional`: Tells whether the drawing elemet is centered or not `default`: false|
+  
    ## Rectangle
      ### GENERIC SYNTAX
      the syntax for
