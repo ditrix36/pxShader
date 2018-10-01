@@ -45,7 +45,23 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
      * [ CDSys ](#CDsys)
      * [ sounds ](#sounds)
 * [__More Examples__](#Examples)
-   ### Rectangle
+   ## Setup
+      So we will first see what are the basic requirements to start the tutorial,
+      well fisrt you will actually need to download it and include it in your code in this way.
+      `
+      <html>
+         <body>
+         </body>
+         <!--Here is actually the link for the library-->
+         <script href="pxShader.js"></script>
+         <-- Here is where you place your code-->
+         <script></script>
+      </html>   
+      `
+   ## Rectangle
+     ### GENERIC SYNTAX
+     the syntax for
+     ### EXAMPLE 
    ``` javascript
    var canvas = canvas2d();
    var square = rec({x:10,y:20,w:20,h:20});
