@@ -229,12 +229,12 @@ So let's explain more the general syntax
    ```
    If you can recall this is the syntax we used to initialize a line object expect that in the object we are a new attribute on to the      object parameter which is simply red. So here we have now specified a color on the object which is red so you go on and do same with    other examples we've covered go on and color those shapes.
    So if you are done whith this coloring, we can actually continue.So we can color those shapes as we want with basic css                  colors("red","violet","blue","green") but pxShader has a more diverse variety of colors. It has an object called `COLORS` in which      you can find values of more that __130__ colors. so let's go on and actually use one of these in the next code.
-    ``` javascript
+   ``` javascript
         canvas2d();
         rec({x:300,y:200,w:30,h:50,color:COLORS.CORAL});
         arc({x:300,y:400,r:30,color:COLORS.AQUA});
         draw();
-    ```
-      so there will be a variety of colors in the COLORS object a if you look at the file colors.html in the repo you can actually see         all the colors in the COLORS object.
-      :bulb: the colors can be replaced with numbers from __0__ to __139__ so these values corresponds to the range of colors in the           COLORS object and for each number in that range there will be a corresponding color.
+   ```
+   so there will be a variety of colors in the COLORS object a if you look at the file colors.html in the repo you can actually see        all the colors in the COLORS object.
+   :bulb: the colors can be replaced with numbers from __0__ to __139__ so these values corresponds to the range of colors in the          COLORS object and for each number in that range there will be a corresponding color.
    ## Stroke   
