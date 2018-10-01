@@ -66,8 +66,8 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
   ```
   so this is basically the basic syntax for using the library you can't draw any with calling the __canvas2d()__ funtion or you are bound to get and error so let's look at the function and it's parameters.
   so this is the general syntax for this __canvas2d(width,height,responsive?,centered?)__
-  |paramters|Meaning|
-  |---------|-------|
+  | paramters | Meaning |
+  | --- | --- |
   | width   | `optional`:Specifies the width of the drawing element,`default`:600px|
   | height  | `optional`:Specifies the height of the drawing element,`default`:600px|
   | responsive? | `optional`:Tells whether the drawing element is media responsive or not (adapts it's size to screen size) `default`: false|
