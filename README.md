@@ -16,7 +16,7 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
      * [Drawing an image ](#image)
      * [ Drawing an Line ](#line)
 * __Complex Shapes__
-     * [ objectArray ](#objectArray)
+     * [ objectArray ](#objectarray)
      * [ path objects ](#path)
 * __More Drawing Parameters__
      * [ COLORS ](#colors)
@@ -136,7 +136,7 @@ So let's explain more the general syntax
    :bulb: Setting the deg parameter only to PI will only draw half a circle.
  ## Text
    ### GENERAL SYNTAX
-      ` text({x:x-coord,y:y-coord,txt:text-content});`
+   `text({x:x-coord,y:y-coord,txt:text-content});`
    ### EXAMPLE  
    ``` javascript
    var canvas = canvas2d();
