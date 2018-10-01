@@ -55,7 +55,7 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
          </body>
          <!--Here is actually the link for the library-->
          <script href="pxShader.js"></script>
-         <-- Here is where you place your code-->
+         <!-- Here is where you place your code-->
          <script></script>
       </html>   
       
