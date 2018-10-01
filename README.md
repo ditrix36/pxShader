@@ -177,7 +177,7 @@ So let's explain more the general syntax
    | w | `optional`:specifies the width of the image in th canvas, `default`:The width of the loaded image|
    ## Line
    ### GENERAL SYNTAX
-     ` line({from:[x1,y1],to:[x2,y2],w:width});`
+   `line({from:[x1,y1],to:[x2,y2],w:width});`
    ### EXAMPLE     
    ``` javascript
       var canvas = canvas2d();
@@ -211,7 +211,7 @@ So let's explain more the general syntax
    | array    | Specifies an array of all the objects that make up the object array| 
    
    :bulb: objectArrays are one of the expections to the *specify coordinate rule* since it turns out they don't need any thing to          specify thier coordinates. It Intializes using the coordinates of all elements contituiting it (You will better understand as we get    to animations).
-   ## Path
+ ## Path
    ### GENERAL SYNTAX
    
    
