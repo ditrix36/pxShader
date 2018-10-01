@@ -179,11 +179,11 @@ So let's explain more the general syntax
    ### GENERAL SYNTAX
      ` line({from:[x1,y1],to:[x2,y2],w:width});`
    ### EXAMPLE     
-      ``` javascript
+   ``` javascript
       var canvas = canvas2d();
       var myline = line({from:[10,20],to:[400,300],w:width});;
       myLine.draw();
-      ```
+  ```
    | paramter | meaning |
    | ---      | ----    |
    | from  | specifies the array x and y coordinate of begining of the line `ex`:`from:[x,y]`|
@@ -195,7 +195,7 @@ So let's explain more the general syntax
    ### GENERAL SYNTAX
       ` objArray(array);`
    ### EXAMPLE
-      ``` javascript
+   ``` javascript
          canvas2d();// actually this function don't need to be assigned to a variable as far as it is called
         var r1 = rec({x: 10, y: HEIGHT - 60, w: 200, h: 40});
         var r2 = rec({x: 75, y: HEIGHT - 90, w: 60, h: 30});
@@ -203,7 +203,7 @@ So let's explain more the general syntax
         var c2 = arc({x: r1.x + r1.w - 35, y: HEIGHT - 15, r: 15});
         var car = objArray([r1, r2, c1, c2]);
         car.draw()
-       ```
+   ```
   So as you can see we created two circles/arcs c1 and c2 and two rectangles r1 and  r2 which we used to create an object array in the     form of a car. So we gave all the initialized objects into `objArray()` function to create a new objectArray which is returned into     the variable car.Then we call the method present in all object Shapes which is the `draw()` method. So let's analyse the genera syntax
   
    | paramter | meaning |
