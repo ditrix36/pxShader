@@ -31,7 +31,7 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
      * [ Transparency() ](#transparency)
      * [ Save() ](#save)
      * [ Restore() ](#restore)
-     * [ Math Functions ](#Math Functions)
+     * [ Math Functions ](#Math)
      * [ EraseShape() ](#eraseShape)
      * [ CopyObj() ](#copyoObj)
      * [ Dist() ](#dist)
