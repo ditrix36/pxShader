@@ -19,8 +19,8 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
      * [ objectArray ](#objectArray)
      * [ path objects ](#path)
 * __More Drawing Parameters__
-     * [ Stroke ](#Stroke)
-     * [ COLORS ](#COLORS)
+     * [ COLORS ](#colors)
+     * [ Stroke ](#stroke)
 * [__Global Variables__](#Globals)
 * __More Functions__
      * [ Background() ](#background)
@@ -218,4 +218,23 @@ So let's explain more the general syntax
    ### EXAMPLE
    
    
-   ## 
+   ## COLORS
+   for those who may already know colors are the main elements when creating drawing , games and any design scene thus important. And      since the begening of this, we've been just talking about boring stuffs and if you tried any of the codes in this tutorial you must      have realized that actually all the objects we created where in white. But from now this will change because now we are introducting
+   colors :smile::tulip::dolphin: so all the basic shapes we've see from now can have thier color changed by adding an attribute color 
+   to thier paramter object. that is,
+   ``` javascript
+        canvas2d();
+        l1 =line({from:[12,30],to:[125,60],color:"red"});
+        l1.draw();
+   ```
+   If you can recall this is the syntax we used to initialize a line object expect that in the object we are a new attribute on to the      object parameter which is simply red. So here we have now specified a color on the object which is red so you go on and do same with    other examples we've covered go on and color those shapes.
+   So if you are done whith this coloring, we can actually continue.So we can color those shapes as we want with basic css                  colors("red","violet","blue","green") but pxShader has a more diverse variety of colors. It has an object called `COLORS` in which      you can find values of more that __130__ colors. so let's go on and actually use one of these in the next code.
+    ``` javascript
+        canvas2d();
+        rec({x:300,y:200,w:30,h:50,color:COLORS.CORAL});
+        arc({x:300,y:400,r:30,color:COLORS.AQUA});
+        draw();
+    ```
+      so there will be a variety of colors in the COLORS object a if you look at the file colors.html in the repo you can actually see         all the colors in the COLORS object.
+      :bulb: the colors can be replaced with numbers from __0__ to __139__ so these values corresponds to the range of colors in the           COLORS object and for each number in that range there will be a corresponding color.
+   ## Stroke   
