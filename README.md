@@ -4,44 +4,46 @@
 pxShader is a javascript library mearnt mainly for html5/canvas interactions. 
 
 :bulb:This library is mainly object based.
-:
+for those who don't really like reading :scissors: :books: a video tutorial is available here
 ## Table of Contents
 * __Getting Started__
-      * [ Basic setup ](#setup)
-      * [ The Grid System ](#grid)
+     * [ Basic setup ](#setup)
+     * [ The Grid System ](#grid)
 * __Basic Shapes__
-      * [ Drawing a Rectangle ](#rectangle)
-      * [ Drawing a Circle ](#circle)
-      * [ Drawing a Text ](#text)
-      * [ Drawing an Line ](#line)
-      * [Drawing an image ](#image)
+     * [ Drawing a Rectangle ](#rectangle)
+     * [ Drawing a Circle ](#circle)
+     * [ Drawing a Text ](#text)
+     * [ Drawing an Line ](#line)
+     * [Drawing an image ](#image)
 * __Complex Shapes__
-      * [ objectArray ](#objectArray)
-      * [ path objects ](#path)
+     * [ objectArray ](#objectArray)
+     * [ path objects ](#path)
 * __More Drawing Parameters__
-      * [ Stroke ](#Stroke)
-      * [ COLORS ](#COLORS)
+     * [ Stroke ](#Stroke)
+     * [ COLORS ](#COLORS)
 * [__Global Variables__](#Globals)
 * __More Functions__
-      * [ Background() ](#background)
-      * [ Clear() ](#clear)
-      * [ Translate() ](#translate)
-      * [ Rotate() ](#rotate)
-      * [ Scale() ](#scale)
-      * [ Transparency() ](#transparency)
-      * [ Save() ](#save)
-      * [ Restore() ](#restore)
-      * [ Math Functions ](#Math Functions)
-      * [ EraseShape() ](#eraseShape)
-      * [ CopyObj() ](#copyoObj)
-      * [ Dist() ](#dist)
-      * [ toPoints() ](toPoints)
+     * [ Background() ](#background)
+     * [ Clear() ](#clear)
+     * [ Translate() ](#translate)
+     * [ Rotate() ](#rotate)
+     * [ Scale() ](#scale)
+     * [ Transparency() ](#transparency)
+     * [ Save() ](#save)
+     * [ Restore() ](#restore)
+     * [ Math Functions ](#Math Functions)
+     * [ EraseShape() ](#eraseShape)
+     * [ CopyObj() ](#copyoObj)
+     * [ Dist() ](#dist)
+     * [ toPoints() ](toPoints)
  * __Animations__
-      * [ Animate() ](#animate)
-      * [ Update() ](#update)
-      * [ StopAnim() ](#stopAnim)
-      * [ Sprite Images ](#sprites)
-      * [ Intersect() ](#intersect)
+     * [ Animate() ](#animate)
+     * [ Update() ](#update)
+     * [ StopAnim() ](#stopAnim)
+     * [ Sprite Images ](#sprites)
+     * [ Intersect() ](#intersect)
+     * [ CDSys ](#CDsys)
+     * [ sounds ](#sounds)
 * [__More Examples__](#Examples)
    ### Rectangle
    ``` javascript
