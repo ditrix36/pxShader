@@ -74,7 +74,7 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
   | centered? | `optional`: Tells whether the drawing elemet is centered or not `default`: false|
  
   ## Grid 
-  So basically when most of the shapes in pxShader you are likely to use a coordinate to sepcify where in the canvas you want your shape   to be drawn else it is not drawn or you well *sweet error* . So how do we specify those coordinates for an objectwe are drawing?
+  So basically when most of the shapes in pxShader you are likely to use a coordinate to sepcify where in the canvas you want your shape   to be drawn else it is not drawn or you well *sweet error* . So how do we specify those coordinates for an object we are drawing?
   ``` javascript
       var c = canvas2d();
       var Robj =  {
@@ -94,6 +94,8 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
       grid(25);// the grid () function draws a grid and takes as paramter the space between each line on the grid
       draw();// the draw method draw all shapes that have been initialized
     ```
+    #### OUTPUT
+     [ grid image ](grid.png)
    ## Rectangle
      ### GENERAL SYNTAX
      ` rec({x:x-coord,y:y-coord,w:width,h:height});`
@@ -121,12 +123,12 @@ So let's explain more the general syntax
    var circle = arc({x:10,y:20,r:20});
    circle.draw();
    ```
-   So here we use the function arc to initialize an object shape and return it to the variable circle then call the buit-in method          `circle.draw();` that all object shapes pocess to draw the circle. So let's look at the syntax:
+   So here we use the function arc to initialize an object shape and return it to the variable circle then call the buit-in method          `circle.draw();` that all object shapes pocess to draw the circle. So let's look at the general syntax:
    
    | paramter | meaning |
    | ---      | ----    |
-   | x  | specifies the x coordinate of the top left corner of the arc/circle|
-   | y  | specifes the y coordimaet of the top corner of the arc/circle |
+   | x  | specifies the x coordinate of the center of the arc/circle|
+   | y  | specifes the y coordimaet of the center of the arc/circle |
    | r  | specifies the raduis of the arc/circle|
    |deg | `optinal`: Specifies the number of degrees in the arc/circle in radians, `default:2*PI`|
    :bulb: Setting the deg parameter only to PI will only draw half a circle.
@@ -139,7 +141,7 @@ So let's explain more the general syntax
    var myText = text({x:10,y:20,text:"Hello world"});
    myText.draw();
    ```
-   So here we use the function text to initialize an object shape and return it to the variable myText then call the buit-in method          `myText.draw();` that all object shapes pocess to draw the text. So let's look at the syntax:
+   So here we use the function text to initialize an object shape and return it to the variable myText then call the buit-in method          `myText.draw();` that all object shapes pocess to draw the text. So let's look at the general syntax:
    
    | paramter | meaning |
    | ---      | ----    |
@@ -147,7 +149,7 @@ So let's explain more the general syntax
    | y  | specifes the y coordimaet of the top corner of the text |
    | txt  | specifies the content or the value of the text|
   
-   :bulb: the text object shape (object return by the text function) has another method apart from the `draw()` method which is the        `toBox()` method and this method returns an object which contains the dimeensions of the object. that is:
+   :bulb: the text object shape (object return by the text function) has another method apart from the `draw()` method which is the        `toBox()` method and this method returns an object which contains the dimensions of the object. that is:
    ``` javascript
    var canvas = canvas2d();
    var myText = text({x:10,y:20,txt:"Hello world"});
@@ -155,12 +157,34 @@ So let's explain more the general syntax
    ```
    ## Image
    ### GENERAL SYNTAX
-     ` img({x:x-coord,y:y-coord,src:path});`
-   ### EXAMPLES  
+     ` img({x:x-coord,y:y-coord,src:path,h:height,w:width});`
+   ### EXAMPLE  
    ``` javascript
    var canvas = canvas2d();
    var myImage = img({x:10,y:20,src:"logo.png"});
    myImage.draw();
    ```
-   So here we use the function arc to initialize an object shape and return it to the variable myImage then call the buit-in method          `myImage.draw();` that all object shapes pocess to draw the text. So let's look at the syntax:
-      
+   So here we use the function arc to initialize an object shape and return it to the variable myImage then call the buit-in method          `myImage.draw();` that all object shapes pocess to draw the image. So let's look at the general syntax:
+   
+   | paramter | meaning |
+   | ---      | ----    |
+   | x  | specifies the x coordinate of the top left corner of the image|
+   | y  | specifes the y coordimaet of the top corner of the image |
+   | src  | specifies the url/path to the image file want to draw|
+   | h | `optional`:specifies the height of the image in the canvas ,`default`:The height of the loaded image |
+   | w | `optional`:specifies the width of the image in th canvas, `default`:The width of the loaded image|
+   ## Line
+   ### GENERAL SYNTAX
+     ` line({from:[x1,y1],to:[x2,y2],w:width});`
+   ### EXAMPLE     
+      ``` javascript
+      var canvas = canvas2d();
+      var myline = line({from:[10,20],to:[400,300],w:width});;
+      myLine.draw();
+      ```
+   | paramter | meaning |
+   | ---      | ----    |
+   | from  | specifies the array x and y coordinate of begining of the line `ex`:`from:[x,y]`|
+   | to  | specifies the array x and y coordinate of end of the line `ex`:`to:[x,y]` |
+   | w | specifies the width of the line|   
+# obj
