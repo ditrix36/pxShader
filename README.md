@@ -96,6 +96,7 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
     ```
     #### OUTPUT
      ![ grid image ](grid.PNG)
+     
      :bulb: Any  point on that grid corresponds to that point multiplied by the interval of the grid so the point (2,5) will be (50,125)       when drawing your shape 
    ## Rectangle
      ### GENERAL SYNTAX
