@@ -63,8 +63,8 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
   ``` javascript
       var c = canvas2d();
   ```
-  so this is basically the basic syntax for using the library you can't draw any with calling the __canvas2d()__ funtion or you are bound to get and error so let's look at the function and it's parameters.
-  so this is the general syntax for this __canvas2d(width,height,responsive?,centered?)__
+  so this is the basic syntax for using the library you can't draw any with calling the __canvas2d()__ funtion or you are bound to get and error so let's look at the function and it's parameters.
+  so this is the __General syntax for this : canvas2d(width,height,responsive?,centered?)__
   
   | paramters | Meaning |
   | --- | --- |
