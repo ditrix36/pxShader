@@ -208,7 +208,7 @@ So let's explain more the general syntax
   
    | paramter | meaning |
    | ---      | ----    |
-   | array    | Specifies all the objects that specify the object array()| 
+   | array    | Specifies an array of all the objects that make up the object array| 
    
    :bulb: objectArrays are one of the expections to the *specify coordinate rule* since it turns out they don't need any thing to          specify thier coordinates. It Intializes using the coordinates of all elements contituiting it (You will better understand as we get    to animations).
    ## Path
