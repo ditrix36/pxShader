@@ -269,38 +269,38 @@ So let's explain more the general syntax
  ## Functions
 | function | parameters | meaning | example |
 | ---      | ----       | --------|-------- | 
-|background|`number`:2,`types`:String|Sets the background color of the canvas/drawing element(:bulb:Takes same value as color or stroke attributes)|``` javascript background(COLORS.GRAY);```|
-| clear    |`none`|Clears all Shapes that have been drawn on the canvas element|       |
-| translate|`number`:2,`types`:Number|     |
-| transparency|`number`:1,`type`:Number|        |
-| rotate|`number`:1,`type`:Number|            |             |
-| scale|`number`:2,`types`:Number|     |           |
-| save|`none`|     |    |
-| restore|`none`|   |          |
-| eraseShape|`number`:1 or `none`,`type`:Object|             |        |
-| copyObj |`number`:1,`type`:Object|                |       |
-| dist |`number`:2 or 1,`type`:Object or array)|                       |        |
-| toPoints |`number`:1,`type`:Object|           |
-| ceil |`number`:1,`type`:Number|              |      |
-| floor |`number`:1,`type`:Number|              |      |
-| rand |`number`:2,`types`:Number|              |      |
-| abs |`number`:1,`type`:Number|              |      |
-| max |`number`:2,`types`:Number|              |      |
-| min |`number`:2,`types`:Number|              |      |
-| sin |`number`:1,`type`:Number|              |      |
-| cos |`number`:1,`type`:Number|              |      |
-| tan |`number`:1,`type`:Number|              |      |
-| sinh |`number`:1,`type`:Number|              |      |
-| cosh |`number`:1,`type`:Number|              |      |
-| tanh |`number`:1,`type`:Number|              |      |
-| asin |`number`:1,`type`:Number|              |      |
-| acos |`number`:1,`type`:Number|              |      |
-| atan |`number`:1,`type`:Number|              |      |
-| asinh |`number`:1,`type`:Number|              |      |
-| acosh |`number`:1,`type`:Number|              |      |
-| atanh |`number`:1,`type`:Number|              |      |
-| sqrt |`number`:1,`type`:Number|              |      |
-| exp |`number`:1,`type`:Number|              |      |
-| ln |`number`:1,`type`:Number|              |      |
-| pow |`number`:2,`types`:Number|              |      |
+|background|`number`:2,`types`:String|Sets the background color of the canvas/drawing element(:bulb:Takes same value as color or stroke attributes)|`background(COLORS.GRAY);`|
+| clear    |`none`|Clears all Shapes that have been drawn on the canvas element|`clear()`|
+| translate|`number`:2,`types`:Number|Sets the begining point of drawing to the paramters of drawing `ie` if the parameters are 50,100 when drawing a shape at x:0,y:0 the shape will instead be drawn at x:50,y:100|`translate(300,200)`|
+| transparency|`number`:1,`type`:Number|Sets the overrall transparency of each shape parameter value ranges from 0(invisible) to 1(Not transparent) |`transparency(0.7)`|
+| rotate|`number`:1,`type`:Number|Rotates a shape by the angle in radians specified in the parameter|`rotate(PI/2)`|
+| scale|`number`:2,`types`:Number|Scales the canvas drawing in the ratio of paramter 1 as x is to parameter 2 as y `ie`executing scale(2,1) and drawing a circle will make the circle oval since the ratio of the x to the y-axis is 2:1|`scale(2,1)`|
+| save|`none`|Saves all previous transformation like rotate,translate,scale done on the canvas|`save()`|
+| restore|`none`|Saves all previous saved transformation |`restore()`|          |
+| eraseShape|`number`:1 or `none`,`type`:Object| erase a shape from the drawing context such that on calling draw() function it is not longer drawn.:bulb:If no value is given to it.removes all previously initialized shapes|`eraseShape(rectangle)`|
+| copyObj |`number`:1,`type`:Object|Takes every attributes of an object copies it and returns it| `var copied = copyObj({x:10,y:30});`       |
+| dist |`number`:2 or 1,`type`:Object or array)|Calculates the distance between two objects that has x and y attributes|`dist(rectangle,circle)`|
+| toPoints |`number`:2 or 1,`type`:Object and Number|changes an object into an array of points with x and y attributes the second paramter sepcifies the distance between the points which is 7 by `default`|`toPoints(circle,15)`|
+| ceil |`number`:1,`type`:Number|rounds up the parameter to nearest whole number and returns it|`var n =ceil(5.1)//n is 6`|
+| floor |`number`:1,`type`:Number|rounds down the parameter to nearest whole number and returns it|`var n=floor(5.1)//n is 5`|
+| rand |`number`:2,`types`:Number|returns a random number in the range the first parameter to the second parameter|`var n =rand(2,6)// n is 5`|
+| abs |`number`:1,`type`:Number|Finds the absolute value of the paramter and returns it|`var n =abs(-5)//n is 5`|
+| max |`number`:2,`types`:Number|Finds the maximum value between the two paramters and returns it|`var n = max(5.1,5.5//n is 5.5`|
+| min |`number`:2,`types`:Number|Finds the minimum value between the two paramters and returns it|`var n = min(5.1,5.5//n is 5.1`|      
+| sin |`number`:1,`type`:Number|Returns the sin of the radians angle given in the parameter|`var n = sin(PI/6)//n is ~0.5`      |
+| cos |`number`:1,`type`:Number|Returns the cos of the radians angle given in the parameter|      |
+| tan |`number`:1,`type`:Number|Returns the tan of the radians angle given in the parameter|      |
+| sinh |`number`:1,`type`:Number|Returns the sinh of the radians angle given in the parameter|      |
+| cosh |`number`:1,`type`:Number|Returns the cosh of the radians angle given in the parameter|      |
+| tanh |`number`:1,`type`:Number|Returns the tanh of the radians angle given in the parameter|      |
+| asin |`number`:1,`type`:Number|Returns the asin of the radians angle given in the parameter|      |
+| acos |`number`:1,`type`:Number|Returns the acos of the radians angle given in the parameter|      |
+| atan |`number`:1,`type`:Number|Returns the atan of the radians angle given in the parameter|      |
+| asinh |`number`:1,`type`:Number|Returns the asinh of the radians angle given in the parameter|      |
+| acosh |`number`:1,`type`:Number|Returns the acosh of the radians angle given in the parameter|      |
+| atanh |`number`:1,`type`:Number|Returns the atanh of the radians angle given in the parameter|      |
+| sqrt |`number`:1,`type`:Number|Returns the square root of the given parameter| `var n=sqrt(4)// n is 2`     |
+| exp |`number`:1,`types`:Numbers|Returns the the E to the power of the paramter | `var n=exp(4)// n is 54.59`    |
+| ln |`number`:1,`type`:Number|Returns the natural logarith of the parameter|`var n=exp(54.6)// n ~ 4`|
+| pow |`number`:2,`types`:Number|Returns the first parameter to the power of the second|`var n=pow(4,3)// n is 64`|
  
