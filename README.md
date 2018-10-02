@@ -260,9 +260,30 @@ So let's explain more the general syntax
 | Scale|(#scale)|          |                |
 | Save|(#save)|                  |         |
 | Restore|(#restore)|             |            |
-| Math Functions |(#Math)|              |      |
 | EraseShape|(#eraseShape)|             |        |
-| CopyObj() |#copyoObj)|                |       |
-| Dist() |#dist)|                       |        |
-| toPoints() |toPoints)             |           |
+| CopyObj |#copyoObj)|                |       |
+| Dist |#dist)|                       |        |
+| toPoints |toPoints             |           |
+| ceil |(#Math)|              |      |
+| floor |(#Math)|              |      |
+| rand |(#Math)|              |      |
+| abs |(#Math)|              |      |
+| max |(#Math)|              |      |
+| min |(#Math)|              |      |
+| sin |(#Math)|              |      |
+| cos |(#Math)|              |      |
+| tan |(#Math)|              |      |
+| sinh |(#Math)|              |      |
+| cosh |(#Math)|              |      |
+| tanh |(#Math)|              |      |
+| asin |(#Math)|              |      |
+| acos |(#Math)|              |      |
+| atan |(#Math)|              |      |
+| asinh |(#Math)|              |      |
+| acosh |(#Math)|              |      |
+| atanh |(#Math)|              |      |
+| sqrt |(#Math)|              |      |
+| exp |(#Math)|              |      |
+| ln |(#Math)|              |      |
+| pow |(#Math)|              |      |
  ## Functions
