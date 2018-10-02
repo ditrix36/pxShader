@@ -353,9 +353,9 @@ So let's explain more the general syntax
   |-----------|----------|
   |callback   | The callback function is a functions that will be used to create the animation effect|
   | interval  | `optional`:It is the number of times per second you will call the callback to make the animation(:it may not exceed 60:),`default`:60|
-   They are actually the same parameters as those of the animate.
-   Let's look at an example using this function
-     ``` javascript
+  They are actually the same parameters as those of the animate.
+  Let's look at an example using this function
+  ``` javascript
       canvas2d();
       var circle1 = arc({x:10,y:HEIGHT-10,r:10,color:COLORS.RED});
       var circle = arc({x:10,y:HEIGHT-10,r:10,color:COLORS.RED});
@@ -364,6 +364,6 @@ So let's explain more the general syntax
        circle.x+=2;//this increments the value of the coordinate x of the circle by 2 each the animate loop.
        circle.draw()
       })
-    ```
-    Here the object shape `circle1` is not drawn since in the update function we onl draw 1 circle.
-    :bulb: if the `clear()` function is not used the previously drawn shapes will still be seen on the canvas.
+ ```
+ Here the object shape `circle1` is not drawn since in the update function we onl draw 1 circle.
+ :bulb: if the `clear()` function is not used the previously drawn shapes will still be seen on the canvas.
