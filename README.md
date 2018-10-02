@@ -4,7 +4,7 @@
 pxShader is a javascript library mearnt mainly for html5/canvas interactions. 
 
 :bulb:This library is mainly object based.
-for those who don't really like reading :scissors: :books: a video tutorial is available here
+for those who don't really like reading :scissors: :books: a video tutorial is available ![Here](https://yt3.ggpht.com/-1FJoLSEMFQw/AAAAAAAAAAI/AAAAAAAAAAA/Fz8qx8PL7Qo/s88-c-k-no-mo-rj-c0xffffff/photo.jpg)(https://www.youtube.com/channel/UCnxj0bAsTa7jy35lLeAoswA/playlists?view_as=subscriber)
 ## Table of Contents
 * __Getting Started__
      * [ Basic setup ](#setup)
@@ -27,9 +27,8 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
      * [ Animate() ](#animate)
      * [ Update() ](#update)
      * [ StopAnim() ](#stopAnim)
-     * [ Sprite Images ](#sprites)
      * [ Intersect() ](#intersect)
-* [__More Examples__](#Examples)
+* [__More ](#More)
    ## Setup
     So we will first see what are the basic requirements to start the tutorial,
     well first you will actually need to download it and include it in your code in this way:
@@ -72,7 +71,7 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
       }
       var rect = rec(Robj);
   ```
-   So this is in someway the answer in this code you can see that after intializing the canvas with __canvas2d();__ method we are are creating a new variable Robj which is an object with attributes x and y. So generall y that is always how you are going to specify the coordinates of the object you are about to draw. So this example we are going to a see it the next sections so don't worry much about the next line we are going to discuss further about it. 
+   So this is in someway the answer in this code you can see that after intializing the canvas with __canvas2d();__ method we are are creating a new variable `Robj` which is an object with attributes x and y. So generall y that is always how you are going to specify the coordinates of the object you are about to draw. So this example we are going to a see it the next sections so don't worry much about the next line we are going to discuss further about it. 
    Another interesting question is to say how is the coordinate system scaled? 
    The coordinate system starts from 0 to the width of the element on the x-axis and from 0 to the height of the lement on the y-axis.
    and well for conviency pxShader has an in-build function for drawing that coordinate system so that you can actually place the object    where you want with a bit of precision.
@@ -84,7 +83,7 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
     #### OUTPUT
      ![ grid image ](grid.PNG)
      
-     :bulb: Any  point on that grid corresponds to that point multiplied by the interval of the grid so the point (2,5) will be (50,125)       when drawing your shape 
+     :bulb: Any  point on that grid corresponds to that point multiplied by the interval of the grid so the point (2,5) will be (50,125) when drawing your shape 
    ## Rectangle
      ### GENERAL SYNTAX
      ` rec({x:x-coord,y:y-coord,w:width,h:height});`
@@ -280,7 +279,7 @@ So let's explain more the general syntax
 | eraseShape|`number`:1 or `none`,`type`:Object| erase a shape from the drawing context such that on calling draw() function it is not longer drawn.:bulb:If no value is given to it.removes all previously initialized shapes|`eraseShape(rectangle)`|
 | copyObj |`number`:1,`type`:Object|Takes every attributes of an object copies it and returns it| `var copied = copyObj({x:10,y:30});`       |
 | dist |`number`:2 or 1,`type`:(Object )|Calculates the distance between two objects that has x and y attributes:bulb: if ONLY 1 object is passed to the dist function it actually calculates it's magnitude. |`dist(rectangle,circle)`|
-| toPoints |`number`:2 or 1,`type`:Object and Number|changes an object into an array of points with x and y attributes the second paramter sepcifies the distance between the points which is 7 by `default`|`toPoints(circle,15)`|
+| toPoints |`number`:2 or 1,`type`:Object and Number|changes an object shape into an array of points with x and y attributes the second parameter sepcifies the distance between the points which is 7 by `default`|`toPoints(circle,15)`|
 | ceil |`number`:1,`type`:Number|rounds up the parameter to nearest whole number and returns it|`var n =ceil(5.1)//n is 6`|
 | floor |`number`:1,`type`:Number|rounds down the parameter to nearest whole number and returns it|`var n=floor(5.1)//n is 5`|
 | rand |`number`:2,`types`:Number|returns a random number in the range the first parameter to the second parameter|`var n =rand(2,6)// n is 5`|
@@ -367,3 +366,29 @@ So let's explain more the general syntax
  ```
  Here the object shape `circle1` is not drawn since in the update function we onl draw 1 circle.
  :bulb: if the `clear()` function is not used the previously drawn shapes will still be seen on the canvas.
+## StopAnim
+   `stopAnim` is a simple function that is called without any paramter has stops the current animation in launched using either the `animate` or the `update` functions.
+   ### EXAMPLE
+   ``` javascript
+      canvas2d();
+      var circle1 = arc({x:10,y:HEIGHT-10,r:10,color:COLORS.RED});
+      var circle = arc({x:10,y:HEIGHT-10,r:10,color:COLORS.RED});
+      update(function(){
+         clear();
+       circle.x+=2;//this increments the value of the coordinate x of the circle by 2 each the animate loop.
+       if(circle.x+circle.r>WIDTH){
+         stopAnim();
+       }
+       circle.draw()
+      })
+ ```
+ So if you try this you will see that the animating circle stops at a point that is when it touches the end of the canvas element. So in the code we compare if the x coordinate of the left edge of the circle is greater that the width of the canvas and if it is true we stop the animation.
+ 
+ ## Intersect
+   Intersect function checks if an object shape touches another and returns true or false value.
+   
+   
+ ## More
+   Concepts such as `Pixel Manipulation` , `animations` with sprites can be found in the video tutorials ![Here](https://yt3.ggpht.com/-1FJoLSEMFQw/AAAAAAAAAAI/AAAAAAAAAAA/Fz8qx8PL7Qo/s88-c-k-no-mo-rj-c0xffffff/photo.jpg)(https://www.youtube.com/channel/UCnxj0bAsTa7jy35lLeAoswA/playlists?view_as=subscriber)
+     
+ 
