@@ -28,7 +28,7 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
      * [ Update() ](#update)
      * [ StopAnim() ](#stopAnim)
      * [ Intersect() ](#intersect)
-* [__More ](#More)
+* [__MORE__](#More)
    ## Setup
     So we will first see what are the basic requirements to start the tutorial,
     well first you will actually need to download it and include it in your code in this way:
