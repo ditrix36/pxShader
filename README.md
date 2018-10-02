@@ -61,7 +61,7 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
   | centered? | `optional`: Tells whether the drawing elemet is centered or not `default`: false|
  
   ## Grid 
-  So basically when most of the shapes in pxShader you are likely to use a coordinate to sepcify where in the canvas you want your shape   to be drawn else it is not drawn or you well *sweet error* . So how do we specify those coordinates for an object we are drawing?
+  So basically when most of the shapes in pxShader you are likely to use a coordinate to sepcify where in the canvas you want your shape   to be drawn else it is not drawn or you recieve a *sweet error* . So how do we specify those coordinates for an object we are drawing?
   ``` javascript
       var c = canvas2d();
       var Robj =  {
