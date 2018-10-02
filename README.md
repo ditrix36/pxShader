@@ -197,10 +197,10 @@ So let's explain more the general syntax
    ### EXAMPLE
    ``` javascript
          canvas2d();// actually this function don't need to be assigned to a variable as far as it is called
-        var r1 = rec({x: 10, y: HEIGHT - 60, w: 200, h: 40});
-        var r2 = rec({x: 75, y: HEIGHT - 90, w: 60, h: 30});
-        var c1 = arc({x: 35, y: HEIGHT - 15, r: 15});
-        var c2 = arc({x: r1.x + r1.w - 35, y: HEIGHT - 15, r: 15});
+        var r1 = rec({x: 10, y: 540, w: 200, h: 40});
+        var r2 = rec({x: 75, y: 510, w: 60, h: 30});
+        var c1 = arc({x: 35, y: 585, r: 15});
+        var c2 = arc({x: 175, y: 585, r: 15});
         var car = objArray([r1, r2, c1, c2]);
         car.draw()
    ```
@@ -238,3 +238,25 @@ So let's explain more the general syntax
    so there will be a variety of colors in the COLORS object a if you look at the file colors.html in the repo you can actually see        all the colors in the COLORS object.
    :bulb: the colors can be replaced with numbers from __0__ to __139__ so these values corresponds to the range of colors in the          COLORS object and for each number in that range there will be a corresponding color.
    ## Stroke   
+   The  Stroke parameter is very similar that of the color parameter in that it helps to bring more life and beautify the objects which    are drawn.
+   Let's look at this example where it is combined with color attribute to give more life to our car from the objectArray section.
+   ``` javascript
+      canvas2d();
+      var r1 = rec({x: 10, y: 540, w: 200, h: 40,color:COLORS.LIGHTCORAL});
+      var r2 = rec({x: 75, y: 510, w: 60, h: 30,color:COLORS.LIGHTBLUE,stroke:{color:COLORS.LIGHTCORAL,width:7,coop:true}});
+      var c1 = arc({x: 35, y: 585, r: 15,color:COLORS.WHITE,stroke:{color:COLORS.BLACK,width:10,coop:true}});
+      var c2 = arc({x: 175, y: 585, r: 15,color:COLORS.WHITE,stroke:{color:COLORS.BLACK,width:10,coop:true}});
+      var car = objArray([r1, r2, c1, c2]);
+      car.draw();
+   ```
+   So as you can see the stroke paramter makes things look weird without necessary them being. the stroke is an object that specifies      the border of our shapes. So it's value is an object of atleast 1 attribute and atmost 4 attributes.
+   so let's look at the general format for our stroke object.
+   `{color:String,width:real,coop:boolean,cap:string}`
+   
+   | attribute | Meaning |
+   | ---       | ---     |
+   |color| `optional`:specifies the value of color of the border (Can take the same values as the color parameter),`default`:"black"|
+   | width     |`optional`:Specifies the width of the border ,`default`:"1px"|
+   |coop       |`optional`:Specifies whether the color attribute is to be used in same time width the stroke attribute,`default`:false|
+   | cap       |`optional`:specifies the shape of the edge of the border in a non closed shape `values`:"butt|round|square",`default`: "butt"|
+   
