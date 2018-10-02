@@ -4,7 +4,7 @@
 pxShader is a javascript library mearnt mainly for html5/canvas interactions. 
 
 :bulb:This library is mainly object based.
-for those who don't really like reading :scissors: :books: a video tutorial is available !{[Here](https://yt3.ggpht.com/-1FJoLSEMFQw/AAAAAAAAAAI/AAAAAAAAAAA/Fz8qx8PL7Qo/s88-c-k-no-mo-rj-c0xffffff/photo.jpg)](https://www.youtube.com/channel/UCnxj0bAsTa7jy35lLeAoswA/playlists?view_as=subscriber)
+for those who don't really like reading :scissors: :books: a video tutorial is available [![Here](https://yt3.ggpht.com/-1FJoLSEMFQw/AAAAAAAAAAI/AAAAAAAAAAA/Fz8qx8PL7Qo/s88-c-k-no-mo-rj-c0xffffff/photo.jpg)](https://www.youtube.com/channel/UCnxj0bAsTa7jy35lLeAoswA/playlists?view_as=subscriber)
 ## Table of Contents
 * __Getting Started__
      * [ Basic setup ](#setup)
@@ -388,7 +388,8 @@ So let's explain more the general syntax
    Intersect function checks if an object shape touches another and returns true or false value.
    
    
+   
  ## More
-   Concepts such as `Pixel Manipulation` , `animations` with sprites can be found in the video tutorials ![[Here](https://yt3.ggpht.com/-1FJoLSEMFQw/AAAAAAAAAAI/AAAAAAAAAAA/Fz8qx8PL7Qo/s88-c-k-no-mo-rj-c0xffffff/photo.jpg)](https://www.youtube.com/channel/UCnxj0bAsTa7jy35lLeAoswA/playlists?view_as=subscriber)
+   Concepts such as `Pixel Manipulation` , `animations` with sprites can be found in the video tutorials [![Here](https://yt3.ggpht.com/-1FJoLSEMFQw/AAAAAAAAAAI/AAAAAAAAAAA/Fz8qx8PL7Qo/s88-c-k-no-mo-rj-c0xffffff/photo.jpg)](https://www.youtube.com/channel/UCnxj0bAsTa7jy35lLeAoswA/playlists?view_as=subscriber)
      
  
