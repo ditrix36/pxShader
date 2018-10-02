@@ -21,22 +21,9 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
 * __More Drawing Parameters__
      * [ COLORS ](#colors)
      * [ Stroke ](#stroke)
-* [__Global Variables__](#Globals)
-* __More Functions__
-     * [ Background() ](#background)
-     * [ Clear() ](#clear)
-     * [ Translate() ](#translate)
-     * [ Rotate() ](#rotate)
-     * [ Scale() ](#scale)
-     * [ Transparency() ](#transparency)
-     * [ Save() ](#save)
-     * [ Restore() ](#restore)
-     * [ Math Functions ](#Math)
-     * [ EraseShape() ](#eraseShape)
-     * [ CopyObj() ](#copyoObj)
-     * [ Dist() ](#dist)
-     * [ toPoints() ](toPoints)
- * __Animations__
+* [__Global Variables__](#globals)
+* [__More Functions__](#functions)
+* __Animations__
      * [ Animate() ](#animate)
      * [ Update() ](#update)
      * [ StopAnim() ](#stopAnim)
@@ -260,4 +247,22 @@ So let's explain more the general syntax
    |coop       |`optional`:Specifies whether the color attribute is to be used in same time width the stroke attribute,`default`:false|
    | cap       |`optional`:specifies the shape of the edge of the border in a non closed shape(line,semi-circle) `values`:"butt\|round\|square",`default`: "butt"|
    
-:bulb: if the coop attribute of the stroke is not set or set to false the color attribute is eliminated when drawing the shape
+:bulb: If the coop attribute of the stroke is not set or set to false the color attribute is eliminated when drawing the shape
+ ## Globals
+ ## functions
+| function | parameters | meaning | example |
+| ---      | ----       | --------|-------- | 
+|Background|(#background)|        |         |
+| Clear    |(#clear)    |        |       |
+| Translate|(#translate)|     |
+| Transparency|(#transparency)|        |
+| Rotate|(#rotate)|            |             |
+| Scale|(#scale)|          |                |
+| Save|(#save)|                  |         |
+| Restore|(#restore)|             |            |
+| Math Functions |(#Math)|              |      |
+| EraseShape|(#eraseShape)|             |        |
+| CopyObj() |#copyoObj)|                |       |
+| Dist() |#dist)|                       |        |
+| toPoints() |toPoints)             |           |
+ ## Functions
