@@ -269,8 +269,8 @@ So let's explain more the general syntax
  ## Functions
 | function | parameters | meaning | example |
 | ---      | ----       | --------|-------- | 
-|background|`number`:2,`types`:String|        |         |
-| clear    |`none`|        |       |
+|background|`number`:2,`types`:String|Sets the background color of the canvas/drawing element(:bulb:Takes same value as color or stroke attributes)|``` javascript background(COLORS.GRAY);```|
+| clear    |`none`|Clears all Shapes that have been drawn on the canvas element|       |
 | translate|`number`:2,`types`:Number|     |
 | transparency|`number`:1,`type`:Number|        |
 | rotate|`number`:1,`type`:Number|            |             |
