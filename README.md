@@ -249,20 +249,37 @@ So let's explain more the general syntax
    
 :bulb: If the coop attribute of the stroke is not set or set to false the color attribute is eliminated when drawing the shape
  ## Globals
- ## functions
+   Globals refer to variables that generally do not change and can be used in the code for couple of reasons
+ 
+| Name | Type | meaning |
+| ----| ------|---------|
+| PI | Number| contains the value of PI(22/7)|
+| E  |Number | contains the value of the base of ln (euler's number)|
+|WIDTH|Number| contains the width of the canvas element we are drawing on|
+|HEIGHT|Number|contains the height of the canvas element we are drawing on|
+|TRANS_STAT|Array|contains an array of the values last transfromation done using transate() `ie`[x-coordinate,y-coordinate]|
+|SCALE_STAT|Array |contains an array of the values last scale done on canvas using scale() `ie`[x-scale,y-scale]|
+|ROT_STAT | Number|contains the value of last rotation done on canvas using rotate() |
+|KEY_P | String | contains the string value for the keyboard key being pressed |
+|KEY_U| String | contains the string value for the keyboard key being released |
+|MP_X | Number |  contains the x-coordinate of the mouse in the canvas/drawing element|
+|MP_Y | Number|   contains the y-coordinate of the mouse in the canvas/drawing element|
+| CLICK | Boolean| is true when mouse has been clicked|
+|DB_CLICK| Boolean| is true when mouse has been  double clicked|
+ ## Functions
 | function | parameters | meaning | example |
 | ---      | ----       | --------|-------- | 
-|Background|(#background)|        |         |
-| Clear    |(#clear)    |        |       |
-| Translate|(#translate)|     |
-| Transparency|(#transparency)|        |
-| Rotate|(#rotate)|            |             |
-| Scale|(#scale)|          |                |
-| Save|(#save)|                  |         |
-| Restore|(#restore)|             |            |
-| EraseShape|(#eraseShape)|             |        |
-| CopyObj |#copyoObj)|                |       |
-| Dist |#dist)|                       |        |
+|background|(#background)|        |         |
+| clear    |(#clear)    |        |       |
+| translate|(#translate)|     |
+| transparency|(#transparency)|        |
+| rotate|(#rotate)|            |             |
+| scale|(#scale)|          |                |
+| save|(#save)|                  |         |
+| restore|(#restore)|             |            |
+| eraseShape|(#eraseShape)|             |        |
+| copyObj |#copyoObj)|                |       |
+| dist |#dist)|                       |        |
 | toPoints |toPoints             |           |
 | ceil |(#Math)|              |      |
 | floor |(#Math)|              |      |
@@ -286,4 +303,4 @@ So let's explain more the general syntax
 | exp |(#Math)|              |      |
 | ln |(#Math)|              |      |
 | pow |(#Math)|              |      |
- ## Functions
+ 
