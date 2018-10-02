@@ -258,5 +258,6 @@ So let's explain more the general syntax
    |color| `optional`:specifies the value of color of the border (Can take the same values as the color parameter),`default`:"black"|
    | width     |`optional`:Specifies the width of the border ,`default`:"1px"|
    |coop       |`optional`:Specifies whether the color attribute is to be used in same time width the stroke attribute,`default`:false|
-   | cap       |`optional`:specifies the shape of the edge of the border in a non closed shape `values`:"butt\|round\|square",`default`: "butt"|
+   | cap       |`optional`:specifies the shape of the edge of the border in a non closed shape(line,semi-circle) `values`:"butt\|round\|square",`default`: "butt"|
    
+:bulb: if the coop attribute of the stroke is not set or set to false the color attribute is eliminated when drawing the shape
