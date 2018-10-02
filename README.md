@@ -323,13 +323,13 @@ So let's explain more the general syntax
  ```    
    What you will see is a red circle moving from left to right on the bottom of the canvas. So the same trick could be used insteaad by substracting the property y so it it moves upward. Well the animate uses the draw() function to draw so will draw all the object shapes    that have been initialized so care must be taken using it.So if you are using animate, __DONOT FORGET TO ERASE THE SHAPES THAT AREN'T BEING USED IN THE ANIMATION__; This could be achieved by using the `eraseShapes` function thus `eraseShape(circle);` doing this, the circle will not longer be drawn when using the draw() function and thus not drawn in the animation.
    So let's look at more examples
-     ``` javascript
+ ``` javascript
       canvas2d();
       var circle = arc({x:WIDTH/2,y:HEIGHT/2,r:10,color:COLORS.RED});// using WIDTH/2 and HEIGHT/2 as y and x coordinates respectively          will make it stand at the center of the canvas
       animate(function(){
          circle.r+=2;//this increments the value of the raduis of the circle by 2 each the animate loop.
       })
-      ```
+```
    If you try this you will see the red circle instead growing until it fills the canvas completely. So one thing to know about pxShader     is that the properties inputted in the object parameter when initializing a shape are also given to the initialized shapes thus can     be changed during the animation.eg.You could change the color attribute of the circle to be a random number between 0 and 139  to       change it's color.
    You could as well change the `txt` or it's font property of a text object shape during the animation.
    You could change the `w` or `h` attributes of a rectangle during an animation.
