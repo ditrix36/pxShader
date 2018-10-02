@@ -269,38 +269,38 @@ So let's explain more the general syntax
  ## Functions
 | function | parameters | meaning | example |
 | ---      | ----       | --------|-------- | 
-|background|(#background)|        |         |
-| clear    |(#clear)    |        |       |
-| translate|(#translate)|     |
-| transparency|(#transparency)|        |
-| rotate|(#rotate)|            |             |
-| scale|(#scale)|          |                |
-| save|(#save)|                  |         |
-| restore|(#restore)|             |            |
-| eraseShape|(#eraseShape)|             |        |
-| copyObj |#copyoObj)|                |       |
-| dist |#dist)|                       |        |
-| toPoints |toPoints             |           |
-| ceil |(#Math)|              |      |
-| floor |(#Math)|              |      |
-| rand |(#Math)|              |      |
-| abs |(#Math)|              |      |
-| max |(#Math)|              |      |
-| min |(#Math)|              |      |
-| sin |(#Math)|              |      |
-| cos |(#Math)|              |      |
-| tan |(#Math)|              |      |
-| sinh |(#Math)|              |      |
-| cosh |(#Math)|              |      |
-| tanh |(#Math)|              |      |
-| asin |(#Math)|              |      |
-| acos |(#Math)|              |      |
-| atan |(#Math)|              |      |
-| asinh |(#Math)|              |      |
-| acosh |(#Math)|              |      |
-| atanh |(#Math)|              |      |
-| sqrt |(#Math)|              |      |
-| exp |(#Math)|              |      |
-| ln |(#Math)|              |      |
-| pow |(#Math)|              |      |
+|background|`number`:2,`types`:String|        |         |
+| clear    |`none`|        |       |
+| translate|`number`:2,`types`:Number|     |
+| transparency|`number`:1,`type`:Number|        |
+| rotate|`number`:1,`type`:Number|            |             |
+| scale|`number`:2,`types`:Number|     |           |
+| save|`none`|     |    |
+| restore|`none`|   |          |
+| eraseShape|`number`:1 or `none`,`type`:Object|             |        |
+| copyObj |`number`:1,`type`:Object|                |       |
+| dist |`number`:2 or 1,`type`:Object or array)|                       |        |
+| toPoints |`number`:1,`type`:Object|           |
+| ceil |`number`:1,`type`:Number|              |      |
+| floor |`number`:1,`type`:Number|              |      |
+| rand |`number`:2,`types`:Number|              |      |
+| abs |`number`:1,`type`:Number|              |      |
+| max |`number`:2,`types`:Number|              |      |
+| min |`number`:2,`types`:Number|              |      |
+| sin |`number`:1,`type`:Number|              |      |
+| cos |`number`:1,`type`:Number|              |      |
+| tan |`number`:1,`type`:Number|              |      |
+| sinh |`number`:1,`type`:Number|              |      |
+| cosh |`number`:1,`type`:Number|              |      |
+| tanh |`number`:1,`type`:Number|              |      |
+| asin |`number`:1,`type`:Number|              |      |
+| acos |`number`:1,`type`:Number|              |      |
+| atan |`number`:1,`type`:Number|              |      |
+| asinh |`number`:1,`type`:Number|              |      |
+| acosh |`number`:1,`type`:Number|              |      |
+| atanh |`number`:1,`type`:Number|              |      |
+| sqrt |`number`:1,`type`:Number|              |      |
+| exp |`number`:1,`type`:Number|              |      |
+| ln |`number`:1,`type`:Number|              |      |
+| pow |`number`:2,`types`:Number|              |      |
  
