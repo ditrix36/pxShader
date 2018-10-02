@@ -32,7 +32,7 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
 * [__More Examples__](#Examples)
    ## Setup
     So we will first see what are the basic requirements to start the tutorial,
-    well fisrt you will actually need to download it and include it in your code in this way.
+    well first you will actually need to download it and include it in your code in this way:
 
       <html>
          <body>
@@ -48,9 +48,9 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
   ``` javascript
       var c = canvas2d();
   ```
-  The canvas2d() function initializes the drawing area or __canvas__ where you will draw all you shapes and returns the DOM object of     that canvas. so basically the variable c will contain the an object. if you are used to the __DOM (DOCUMENT OBJECT MODEL)__ if js you   can actually do funny things with it as giving it an id/class to further format it's style :smile: 
+  The canvas2d() function initializes the drawing area or __canvas__ where you will draw all you shapes and returns the DOM object of     that canvas. So basically the variable c will contain the an object. if you are used to the __DOM (DOCUMENT OBJECT MODEL)__ in js you   can actually do funny things with it as giving it an id/class to further format it's style :smile: 
  
-  so this is the basic syntax for using the library you can't draw any with calling the __canvas2d()__ funtion or you are bound to get     and error so let's look at the function and it's parameters.
+  so this is the basic syntax for using the library you can't draw any without calling the __canvas2d()__ funtion or you are bound to     get an error so let's look at the function and it's parameters.
   so this is the __General syntax for this : canvas2d(width,height,responsive?,centered?)__
   
   | paramters | Meaning |
@@ -279,7 +279,7 @@ So let's explain more the general syntax
 | restore|`none`|Saves all previous saved transformation |`restore()`|          |
 | eraseShape|`number`:1 or `none`,`type`:Object| erase a shape from the drawing context such that on calling draw() function it is not longer drawn.:bulb:If no value is given to it.removes all previously initialized shapes|`eraseShape(rectangle)`|
 | copyObj |`number`:1,`type`:Object|Takes every attributes of an object copies it and returns it| `var copied = copyObj({x:10,y:30});`       |
-| dist |`number`:2 or 1,`type`:Object or array)|Calculates the distance between two objects that has x and y attributes|`dist(rectangle,circle)`|
+| dist |`number`:2 or 1,`type`:(Object )|Calculates the distance between two objects that has x and y attributes:bulb: if ONLY 1 object is passed to the dist function it actually calculates it's magnitude. |`dist(rectangle,circle)`|
 | toPoints |`number`:2 or 1,`type`:Object and Number|changes an object into an array of points with x and y attributes the second paramter sepcifies the distance between the points which is 7 by `default`|`toPoints(circle,15)`|
 | ceil |`number`:1,`type`:Number|rounds up the parameter to nearest whole number and returns it|`var n =ceil(5.1)//n is 6`|
 | floor |`number`:1,`type`:Number|rounds down the parameter to nearest whole number and returns it|`var n=floor(5.1)//n is 5`|
@@ -302,5 +302,68 @@ So let's explain more the general syntax
 | sqrt |`number`:1,`type`:Number|Returns the square root of the given parameter| `var n=sqrt(4)// n is 2`     |
 | exp |`number`:1,`types`:Numbers|Returns the the E to the power of the paramter | `var n=exp(4)// n is 54.59`    |
 | ln |`number`:1,`type`:Number|Returns the natural logarith of the parameter|`var n=exp(54.6)// n ~ 4`|
-| pow |`number`:2,`types`:Number|Returns the first parameter to the power of the second|`var n=pow(4,3)// n is 64`|
- 
+| pow |`number`:2,`types`:Number|Returns the first parameter to the power of the second|`var n=pow(4,3)// n is 6#4`|
+## Animate
+   Animate is one of the principal methods used in animations in pxShader.js .So this method has 2 arguments. so animations are            generally created by changing object properties slighly in the callback function of the animate function.
+   ### GENERAL SYNTAX
+   `animate(callback,interval);`
+   
+  | parameter | meaning |
+  |-----------|----------|
+  |callback   | The callback function is a functions that will be used to create the animation effect|
+  | interval  | `optional`:It is the number of times per second you will call the callback to make the animation(:it may not exceed 60:),`default`:60|
+   ### EXAMPLE
+   So let's actually do our first animation
+  ``` javascript
+      canvas2d();
+      var circle = arc({x:10,y:HEIGHT-10,r:10,color:COLORS.RED});// remember that HEIGHT is the value height of the canvas we subtract the raduis if the circle(10) so that it is at the bottom 
+      animate(function(){
+         circle.x+=2;//this increments the value of the coordinate x of the circle by 2 each the animate loop.
+      })
+ ```    
+   What you will see is a red circle moving from left to right on the bottom of the canvas. So the same trick could be used insteaad by substracting the property y so it it moves upward. Well the animate uses the draw() function to draw so will draw all the object shapes    that have been initialized so care must be taken using it.So if you are using animate, __DONOT FORGET TO ERASE THE SHAPES THAT AREN'T BEING USED IN THE ANIMATION__; This could be achieved by using the `eraseShapes` function thus `eraseShape(circle);` doing this, the circle will not longer be drawn when using the draw() function and thus not drawn in the animation.
+   So let's look at more examples
+     ``` javascript
+      canvas2d();
+      var circle = arc({x:WIDTH/2,y:HEIGHT/2,r:10,color:COLORS.RED});// using WIDTH/2 and HEIGHT/2 as y and x coordinates respectively          will make it stand at the center of the canvas
+      animate(function(){
+         circle.r+=2;//this increments the value of the raduis of the circle by 2 each the animate loop.
+      })
+      ```
+   If you try this you will see the red circle instead growing until it fills the canvas completely. So one thing to know about pxShader     is that the properties inputted in the object parameter when initializing a shape are also given to the initialized shapes thus can     be changed during the animation.eg.You could change the color attribute of the circle to be a random number between 0 and 139  to       change it's color.
+   You could as well change the `txt` or it's font property of a text object shape during the animation.
+   You could change the `w` or `h` attributes of a rectangle during an animation.
+   You can as well extend a line by increment the values of the array in the  `to` property during an animtion.
+   You also make the `to` property of the line to be an array containing `[MP_X,MP_Y]` so that it extends following the mouse direction.
+   __THERE are may possiblities that we shall explore in the video tutorial__
+   :bulb: Extra attributes can be used when initializing the object shape without any error or effect in the code and those will be owned by the object shape created.
+   example:
+   ``` javascript
+      canvas2d();
+      var circle = arc({x:WIDTH/2,y:HEIGHT/2,r:10,color:COLORS.RED,lives:5});
+      console.log(circle.lives)//this will give us 5
+   ```
+ ## Update
+   The update function is also very used in animations using pxShader.js the only difference from the update function is  that each time when using this function you must clear the previous object drawn on the canavas using the `clear()` function and draw them back. So this method so the problem main problem in the animate function since here we have to draw the objects we want to animate by our selves and thus only objects that had to be drawn are drawn without erasing the shapes with the eraseShape.
+   Let's look at the Syntax.
+   ### GENERAL SYNTAX
+   `update(callback,interval);`
+   
+  | parameter | meaning |
+  |-----------|----------|
+  |callback   | The callback function is a functions that will be used to create the animation effect|
+  | interval  | `optional`:It is the number of times per second you will call the callback to make the animation(:it may not exceed 60:),`default`:60|
+   They are actually the same parameters as those of the animate.
+   Let's look at an example using this function
+     ``` javascript
+      canvas2d();
+      var circle1 = arc({x:10,y:HEIGHT-10,r:10,color:COLORS.RED});
+      var circle = arc({x:10,y:HEIGHT-10,r:10,color:COLORS.RED});
+      update(function(){
+         clear();
+       circle.x+=2;//this increments the value of the coordinate x of the circle by 2 each the animate loop.
+       circle.draw()
+      })
+    ```
+    Here the object shape `circle1` is not drawn since in the update function we onl draw 1 circle.
+    :bulb: if the `clear()` function is not used the previously drawn shapes will still be seen on the canvas.
