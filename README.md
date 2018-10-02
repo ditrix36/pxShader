@@ -352,6 +352,7 @@ So let's explain more the general syntax
   |-----------|----------|
   |callback   | The callback function is a functions that will be used to create the animation effect|
   | interval  | `optional`:It is the number of times per second you will call the callback to make the animation(:it may not exceed 60:),`default`:60|
+  
   They are actually the same parameters as those of the animate.
   Let's look at an example using this function
   ``` javascript
