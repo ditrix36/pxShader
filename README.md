@@ -28,7 +28,7 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
      * [ Update() ](#update)
      * [ StopAnim() ](#stopAnim)
      * [ Intersect() ](#intersect)
-* [__MORE__](#More)
+* [__MORE__](#more)
    ## Setup
     So we will first see what are the basic requirements to start the tutorial,
     well first you will actually need to download it and include it in your code in this way:
@@ -387,10 +387,36 @@ So let's explain more the general syntax
  
  ## Intersect
    Intersect function checks if an object shape touches another and returns true or false value.
-   
-   
-   
+   ``` javascript
+        canvas2d();
+        var a = arc({x:40,y:100,r:5}); 
+        var b = arc({x:240,y:350,r:10});
+         console.log(intersect(a,b));//outputs false
+   ```
+   intersect function can also be used in another way. If it is given only 1 parameter and the parameter is an array, then it checks whether the coordinates in the array are in the last drawn shape then returns a boolean.
+ ``` javascript
+        canvas2d();
+        var a = arc({x:40,y:100,r:10});
+        a.draw();
+       console.log(intersect([40,100]));//outputs true
+ ```
+  __let's make things interesting:__
+  ``` javascript
+        canvas2d();
+        var a = arc({x:40,y:100,r:10});
+        var b = arc({x:240,y:350,r:10});
+        animate(function(){
+              a.x =MP_X; // assigning x coordinate to of circe a to x mouse position
+              a.y =MP_Y; // assigning y coordinate to of circe a to y mouse position
+              if(intersect(a,b)){
+                  a.color = COLORS.CORAL;
+              }else{
+                  a.color = COLORS.WHITE;
+              }
+        })
+  ```
+   This will make circle a to follow the mouseand when circle a touches circle b it changes color
  ## More
-   Concepts such as `Pixel Manipulation` , `animations` with sprites can be found in the video tutorials :point_right:[![Here](https://yt3.ggpht.com/-1FJoLSEMFQw/AAAAAAAAAAI/AAAAAAAAAAA/Fz8qx8PL7Qo/s88-c-k-no-mo-rj-c0xffffff/photo.jpg)](https://www.youtube.com/channel/UCnxj0bAsTa7jy35lLeAoswA/playlists?view_as=subscriber)
+   Concepts such as `Pixel Manipulation` , `animations` with sprites and ___More Examples___ can be found in the video tutorials :point_right:[![Here](https://yt3.ggpht.com/-1FJoLSEMFQw/AAAAAAAAAAI/AAAAAAAAAAA/Fz8qx8PL7Qo/s88-c-k-no-mo-rj-c0xffffff/photo.jpg)](https://www.youtube.com/channel/UCnxj0bAsTa7jy35lLeAoswA/playlists?view_as=subscriber)
      
  
