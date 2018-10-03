@@ -409,7 +409,8 @@ So let's explain more the general syntax
               }
         })
   ```
-   This will make circle a to follow the mouseand when circle a touches circle b it changes color
+   This will make circle a to follow the mouseand when circle a touches circle b it changes color.
+   
    :bulb: `intersect` donot work on image object shapes so comparing whether an image is colliding a rectangle for example can't be done   But you can compare whether the a shape resembling that image with same dimensions and coordinates collide that rectangle :smile:.If it does then the image also does
    ## More
    Concepts such as `Pixel Manipulation` , `animations`,paths with sprites and ___More Examples___ can be found in the video tutorials :point_right:[![Here](https://yt3.ggpht.com/-1FJoLSEMFQw/AAAAAAAAAAI/AAAAAAAAAAA/Fz8qx8PL7Qo/s88-c-k-no-mo-rj-c0xffffff/photo.jpg)](https://www.youtube.com/channel/UCnxj0bAsTa7jy35lLeAoswA/playlists?view_as=subscriber)
