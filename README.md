@@ -163,7 +163,7 @@ So let's explain more the general syntax
    | w | `optional`:specifies the width of the image in th canvas, `default`:The width of the loaded image|
    ## Line
    ### GENERAL SYNTAX
-   `line({from:[x1,y1],to:[x2,y2],w:width});`
+  `line({from:[x1,y1],to:[x2,y2],w:width});`
    ### EXAMPLE     
    ``` javascript
       var canvas = canvas2d();
