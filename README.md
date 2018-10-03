@@ -179,7 +179,7 @@ So let's explain more the general syntax
    So we are actually moving into a more complex shape here remember that we've seen the basics of drawing shape well the objectArray is 
    a complex object shape formed from the variety of other simple shapes seen above. An objectArray is a cluster of basic shapes this is    a really intersting concept since it allows a variety of possibilities like drawing a car from 2 rectangles and a two circles. 
    ### GENERAL SYNTAX
-      ` objArray(array);`
+   ` objArray(array);`
    ### EXAMPLE
    ``` javascript
          canvas2d();// actually this function don't need to be assigned to a variable as far as it is called
