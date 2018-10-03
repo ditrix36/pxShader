@@ -71,9 +71,9 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
       }
       var rect = rec(Robj);
   ```
-   So this is in someway the answer in this code you can see that after intializing the canvas with __canvas2d();__ method we are are creating a new variable `Robj` which is an object with attributes x and y. So generall y that is always how you are going to specify the coordinates of the object you are about to draw. So this example we are going to a see it the next sections so don't worry much about the next line we are going to discuss further about it. 
+   So this is in someway the answer. In this code, you can see that after intializing the canvas with __canvas2d();__ method we are are creating a new variable `Robj` which is an object with attributes x and y. So generally that is always how you are going to specify the coordinates of the object you are about to draw. So this example we are going to a see it the next sections so don't worry much about the next line we are going to discuss further about it. 
    Another interesting question is to say how is the coordinate system scaled? 
-   The coordinate system starts from 0 to the width of the element on the x-axis and from 0 to the height of the lement on the y-axis.
+   The coordinate system starts from 0 to the width of the drawing/canvas element on the x-axis and from 0 to the height of the drawing/canvas element on the y-axis.
    and well for conviency pxShader has an in-build function for drawing that coordinate system so that you can actually place the object    where you want with a bit of precision.
     ``` javascript
       var c = canvas2d();
@@ -93,7 +93,7 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
    var square = rec({x:10,y:20,w:20,h:20});
    square.draw();
    ```
- So here we actually created our first shape. so the rec function initializes an object shape width a draw method and returns it      onto the the variable square so when `square.draw()` is called it actally draws the that object shape we have initialized alternatively we could just only say  `draw()` this will draw all the object shapes that have been initialized. So actually the main difference between these 2 is that the `square.draw()` will only  draw 1 shape that is specific object shape that is in the square variable that has been initialized while the `draw()` draws all the shapes that have been initialized. 
+ So here we actually created our first shape. so the rec function initializes an object shape width a draw method and returns it      onto the the variable square so when `square.draw()` is called it actally draws the that object shape we have initialized alternatively we could just only say  `draw()` this will draw all the object shapes that have been initialized. So actually the main difference between these 2 is that the `square.draw()` will only  draw 1 shape that is specific object shape that is in the square variable that has been initialized while, the `draw()` draws all the shapes that have been initialized. 
 So let's explain more the general syntax     
 
  | paramter | meaning |
@@ -111,14 +111,15 @@ So let's explain more the general syntax
    var circle = arc({x:10,y:20,r:20});
    circle.draw();
    ```
-   So here we use the function arc to initialize an object shape and return it to the variable circle then call the buit-in method          `circle.draw();` that all object shapes pocess to draw the circle. So let's look at the general syntax:
+   So here we use the function arc to initialize a circle object shape and return it to the variable circle then call the buit-in method          `circle.draw();` that all object shapes pocess to draw the circle. So let's look at the general syntax:
    
    | paramter | meaning |
    | ---      | ----    |
    | x  | specifies the x coordinate of the center of the arc/circle|
-   | y  | specifes the y coordimaet of the center of the arc/circle |
+   | y  | specifies the y coordinate of the center of the arc/circle |
    | r  | specifies the raduis of the arc/circle|
    |deg | `optinal`: Specifies the number of degrees in the arc/circle in radians, `default:2*PI`|
+   
    :bulb: Setting the deg parameter only to PI will only draw half a circle.
  ## Text
    ### GENERAL SYNTAX
@@ -129,7 +130,7 @@ So let's explain more the general syntax
    var myText = text({x:10,y:20,text:"Hello world"});
    myText.draw();
    ```
-   So here we use the function text to initialize an object shape and return it to the variable myText then call the buit-in method          `myText.draw();` that all object shapes pocess to draw the text. So let's look at the general syntax:
+   So here we use the function text to initialize a text object shape and return it to the variable myText then call the buit-in method          `myText.draw();` that all object shapes pocess to draw the text. So let's look at the general syntax:
    
    | paramter | meaning |
    | ---      | ----    |
@@ -137,7 +138,7 @@ So let's explain more the general syntax
    | y  | specifes the y coordimaet of the top corner of the text |
    | txt  | specifies the content or the value of the text|
   
-   :bulb: the text object shape (object return by the text function) has another method apart from the `draw()` method which is the        `toBox()` method and this method returns an object which contains the dimensions of the object. that is:
+   :bulb: the text object shape (object return by the text function) has another method apart from the `draw()` method which is the        `toBox()` method and this method returns an object which contains the dimensions of the text object shape. that is:
    ``` javascript
    var canvas = canvas2d();
    var myText = text({x:10,y:20,txt:"Hello world"});
@@ -152,7 +153,7 @@ So let's explain more the general syntax
    var myImage = img({x:10,y:20,src:"logo.png"});
    myImage.draw();
    ```
-   So here we use the function arc to initialize an object shape and return it to the variable myImage then call the buit-in method          `myImage.draw();` that all object shapes pocess to draw the image. So let's look at the general syntax:
+   So here we use the function img to initialize an image object shape and return it to the variable myImage then call the buit-in method `myImage.draw();` that all object shapes pocess to draw the image. So let's look at the general syntax:
    
    | paramter | meaning |
    | ---      | ----    |
@@ -172,12 +173,12 @@ So let's explain more the general syntax
   ```
    | paramter | meaning |
    | ---      | ----    |
-   | from  | specifies the array x and y coordinate of begining of the line `ex`:`from:[x,y]`|
-   | to  | specifies the array x and y coordinate of end of the line `ex`:`to:[x,y]` |
+   | from  | specifies the array x and y coordinate of begining point of the line `ex`:`from:[x,y]`|
+   | to  | specifies the array x and y coordinate of end point of the line `ex`:`to:[x,y]` |
    | w | specifies the width of the line|   
 ## objectArray
    So we are actually moving into a more complex shape here remember that we've seen the basics of drawing shape well the objectArray is 
-   a complex object shape formed from the variety of other simple shapes seen above. An objectArray is a cluster of basic shapes this is    a really intersting concepts since it allows a variety of possibilities like drawing a car from 2 rectangles and a two circles. 
+   a complex object shape formed from the variety of other simple shapes seen above. An objectArray is a cluster of basic shapes this is    a really intersting concept since it allows a variety of possibilities like drawing a car from 2 rectangles and a two circles. 
    ### GENERAL SYNTAX
       ` objArray(array);`
    ### EXAMPLE
