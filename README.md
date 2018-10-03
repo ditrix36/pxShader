@@ -145,7 +145,7 @@ So let's explain more the general syntax
    ```
    ## Image
    ### GENERAL SYNTAX
-     ` img({x:x-coord,y:y-coord,src:path,h:height,w:width});`
+   ` img({x:x-coord,y:y-coord,src:path,h:height,w:width});`
    ### EXAMPLE  
    ``` javascript
    var canvas = canvas2d();
@@ -199,23 +199,25 @@ So let's explain more the general syntax
    :bulb: objectArrays are one of the expections to the *specify coordinate rule* since it turns out they don't need any thing to          specify thier coordinates. It Intializes using the coordinates of all elements contituiting it (You will better understand as we get    to animations).
   
    ## COLORS
-   for those who may already know colors are the main elements when creating drawing , games and any design scene thus important. And      since the begening of this, we've been just talking about boring stuffs and if you tried any of the codes in this tutorial you must      have realized that actually all the objects we created where in white. But from now this will change because now we are introducting
+   for those who may already know colors are the main elements when creating drawing , games and any design scene thus important. And      since the begining of this, we've been just talking about boring stuffs and if you tried any of the codes in this tutorial you must      have realized that actually all the objects we created where in white. But from now this will change because now we are introducting
    colors :smile::tulip::dolphin: so all the basic shapes we've see from now can have thier color changed by adding an attribute color 
-   to thier paramter object. that is,
+   to thier parameter object. that is,
    ``` javascript
         canvas2d();
         l1 =line({from:[12,30],to:[125,60],color:"red"});
         l1.draw();
    ```
-   If you can recall this is the syntax we used to initialize a line object expect that in the object we are a new attribute on to the      object parameter which is simply red. So here we have now specified a color on the object which is red so you go on and do same with    other examples we've covered go on and color those shapes.
-   So if you are done whith this coloring, we can actually continue.So we can color those shapes as we want with basic css                  colors("red","violet","blue","green") but pxShader has a more diverse variety of colors. It has an object called `COLORS` in which      you can find values of more that __130__ colors. so let's go on and actually use one of these in the next code.
+   If you can recall this is the syntax we used to initialize a line object expect that in the object we are a new attribute on to the      object parameter `color` which has value red. So here we have now specified a color on the object which is red so you go on and do      same with other examples we've covered go on and color those shapes.
+   
+   So if you are done with these colorings, we can actually continue.So we can color those shapes as we want with basic css                  colors("red","violet","blue","green") but pxShader has a more diverse variety of colors. It has an object called `COLORS` in which      you can find values of more that __130__ colors. so let's go on and actually use one of these in the next code.
    ``` javascript
         canvas2d();
         rec({x:300,y:200,w:30,h:50,color:COLORS.CORAL});
         arc({x:300,y:400,r:30,color:COLORS.AQUA});
         draw();
    ```
-   so there will be a variety of colors in the COLORS object a if you look at the file colors.html in the repo you can actually see        all the colors in the COLORS object.
+   so there will be a variety of colors in the COLORS object a if you look at the file in the `lib.zip`, colors.html file in the repo you can actually see all the colors in the COLORS object.
+   
    :bulb: the colors can be replaced with numbers from __0__ to __139__ so these values corresponds to the range of colors in the          COLORS object and for each number in that range there will be a corresponding color.
    ## Stroke   
    The  Stroke parameter is very similar that of the color parameter in that it helps to bring more life and beautify the objects which    are drawn.
@@ -237,10 +239,10 @@ So let's explain more the general syntax
    | ---       | ---     |
    |color| `optional`:specifies the value of color of the border (Can take the same values as the color parameter),`default`:"black"|
    | width     |`optional`:Specifies the width of the border ,`default`:"1px"|
-   |coop       |`optional`:Specifies whether the color attribute is to be used in same time width the stroke attribute,`default`:false|
+   |coop       |`optional`:Specifies whether the color attribute is to be used in same time with the stroke attribute,`default`:false|
    | cap       |`optional`:specifies the shape of the edge of the border in a non closed shape(line,semi-circle) `values`:"butt\|round\|square",`default`: "butt"|
    
-:bulb: If the coop attribute of the stroke is not set or set to false the color attribute is eliminated when drawing the shape
+:bulb: If the coop attribute of the stroke is not set or set to false the color attribute is not considered and when drawing the shape it's inner is transparent.
  ## Globals
    Globals refer to variables that generally do not change and can be used in the code for couple of reasons
  
