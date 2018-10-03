@@ -17,7 +17,6 @@ for those who don't really like reading :scissors: :books: a video tutorial is a
      * [ Drawing an Line ](#line)
 * __Complex Shapes__
      * [ objectArray ](#objectarray)
-     * [ path objects ](#path)
 * __More Drawing Parameters__
      * [ COLORS ](#colors)
      * [ Stroke ](#stroke)
@@ -198,13 +197,7 @@ So let's explain more the general syntax
    | array    | Specifies an array of all the objects that make up the object array| 
    
    :bulb: objectArrays are one of the expections to the *specify coordinate rule* since it turns out they don't need any thing to          specify thier coordinates. It Intializes using the coordinates of all elements contituiting it (You will better understand as we get    to animations).
- ## Path
-   ### GENERAL SYNTAX
-   
-   
-   ### EXAMPLE
-   
-   
+  
    ## COLORS
    for those who may already know colors are the main elements when creating drawing , games and any design scene thus important. And      since the begening of this, we've been just talking about boring stuffs and if you tried any of the codes in this tutorial you must      have realized that actually all the objects we created where in white. But from now this will change because now we are introducting
    colors :smile::tulip::dolphin: so all the basic shapes we've see from now can have thier color changed by adding an attribute color 
@@ -366,7 +359,7 @@ So let's explain more the general syntax
        circle.draw()
       })
  ```
- Here the object shape `circle1` is not drawn since in the update function we onl draw 1 circle.
+ Here the object shape `circle1` is not drawn since in the update function we only draw 1 circle.
  :bulb: if the `clear()` function is not used the previously drawn shapes will still be seen on the canvas.
 ## StopAnim
    `stopAnim` is a simple function that is called without any paramter has stops the current animation in launched using either the `animate` or the `update` functions.
@@ -417,7 +410,8 @@ So let's explain more the general syntax
         })
   ```
    This will make circle a to follow the mouseand when circle a touches circle b it changes color
- ## More
-   Concepts such as `Pixel Manipulation` , `animations` with sprites and ___More Examples___ can be found in the video tutorials :point_right:[![Here](https://yt3.ggpht.com/-1FJoLSEMFQw/AAAAAAAAAAI/AAAAAAAAAAA/Fz8qx8PL7Qo/s88-c-k-no-mo-rj-c0xffffff/photo.jpg)](https://www.youtube.com/channel/UCnxj0bAsTa7jy35lLeAoswA/playlists?view_as=subscriber)
+   :bulb: `intersect` donot work on image object shapes so comparing whether an image is colliding a rectangle for example can't be done   But you can compare whether the a shape resembling that image with same dimensions and coordinates collide that rectangle :smile:.If it does then the image also does
+   ## More
+   Concepts such as `Pixel Manipulation` , `animations`,paths with sprites and ___More Examples___ can be found in the video tutorials :point_right:[![Here](https://yt3.ggpht.com/-1FJoLSEMFQw/AAAAAAAAAAI/AAAAAAAAAAA/Fz8qx8PL7Qo/s88-c-k-no-mo-rj-c0xffffff/photo.jpg)](https://www.youtube.com/channel/UCnxj0bAsTa7jy35lLeAoswA/playlists?view_as=subscriber)
      
  
