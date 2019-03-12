@@ -296,7 +296,7 @@ So let's explain more the general syntax
 | atanh |`number`:1,`type`:Number|Returns the atanh of the radians angle given in the parameter|      |
 | sqrt |`number`:1,`type`:Number|Returns the square root of the given parameter| `var n=sqrt(4)// n is 2`     |
 | exp |`number`:1,`types`:Numbers|Returns the the E to the power of the paramter | `var n=exp(4)// n is 54.59`    |
-| ln |`number`:1,`type`:Number|Returns the natural logarith of the parameter|`var n=exp(54.6)// n ~ 4`|
+| ln |`number`:1,`type`:Number|Returns the natural logarithm of the parameter|`var n=ln(54.6)// n ~ 4`|
 | pow |`number`:2,`types`:Number|Returns the first parameter to the power of the second|`var n=pow(4,3)// n is 6#4`|
 ## Animate
    Animate is one of the principal methods used in animations in pxShader.js .So this method has 2 arguments. so animations are            generally created by changing object properties slighly in the callback function of the animate function.
